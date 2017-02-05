@@ -14,8 +14,7 @@ angular.module('app').controller('mainCtrl', function($scope) {
 });
 angular.module('app').directive('userInfoCard', function(){
 	return {
-		template: "User Info Card: {{ user.name }} <br /> <br/> <div ng-show='!!user.address'> Address: {{ user.address.street }} <br /> City: {{ user.address.city }} <br /> Contry: {{ user.address.nation}} <br /></div> <br /> <div> Color: <div ng-repeat='element in user.color'> {{ element }} </div> </div>"
+		templateUrl: "file:///Interview/Front-end_Practice/7.%20Angular%20Directives%20Fundamentals/1.%20First%20Directive/app/userInfoCard.html"
 		// restrict: "C";
-
 	}
 })
