@@ -1,12 +1,22 @@
-User Info Card: {{ user.name }} <br /> <br/>
-<div ng-show='!!user.address'> Address: <br />
-  {{ user.address.street }} <br />
-  {{ user.address.city }} <br />
-  {{ user.address.nation}} <br />
-</div>
-<br />
-<div> Color:
-  <div ng-repeat='element in user.color'>
-    {{ element }}
+<div class="panel panel-primary">
+  <div class="panel-heading">{{user.name}}</div>
+  <div class="panel-body">
+    <div ng-show='!!user.address'>
+      <h4>Address:</h4>
+      {{ user.address.street }} <br />
+      {{ user.address.city }} <br />
+      {{ user.address.nation}} <br />
+    </div> <br />
+
+    <h4>Color: </h4>
+    <ul>
+      <li ng-repeat='element in user.color'>
+        {{element}}
+      </li>
+    </ul>
+    <div ng-show="!!user.show">
+      Clicked: {{ user.show }}
+    </div>
+    <button ng-show="!user.show" class="btn btn-success" ng-click="clickMe(user)">Click me</button>
   </div>
 </div>

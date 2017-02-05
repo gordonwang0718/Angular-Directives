@@ -11,10 +11,18 @@ angular.module('app').controller('mainCtrl', function($scope) {
 		},
 		color: ['black', 'white', 'gray']
 	}
+
+ 
+
 });
 angular.module('app').directive('userInfoCard', function(){
 	return {
-		templateUrl: "file:///Interview/Front-end_Practice/7.%20Angular%20Directives%20Fundamentals/1.%20First%20Directive/app/userInfoCard.html"
-		// restrict: "C";
+		templateUrl: "file:///Interview/Front-end_Practice/7.%20Angular%20Directives%20Fundamentals/2.%20Events%20&%20Scopr%20&%20Controllers/app/userInfoCard.html",
+		// restrict: "E";
+		controller: function($scope){
+			$scope.clickMe = function(ele){
+				ele.show = "Yes Clicked";
+			}
+		}
 	}
 })
